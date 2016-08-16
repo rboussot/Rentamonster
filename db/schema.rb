@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160816123807) do
 
   create_table "monsters", force: :cascade do |t|
     t.string   "name"
+    t.integer  "user_id"
     t.string   "title"
     t.string   "species"
     t.string   "gender"
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160816123807) do
     t.float    "price"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["user_id"], name: "index_monsters_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
