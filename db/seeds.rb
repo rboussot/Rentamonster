@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
 john = User.create(first_name: "John", last_name: "Lennon", password: "azerty", email: "john.lennon@gmail.com")
 david = User.create(first_name: "David", last_name: "Bowie", password: "azerty", email: "david.bowie@gmail.com")
 barack = User.create(first_name: "Barack", last_name: "Obama", password: "azerty", email: "barack.obama@gmail.com")
@@ -12,3 +13,15 @@ Monster.create(name: "Bill", user:john, species:"Vampire")
 Monster.create(name: "Nessie", user:david, species:"Dinosaur")
 Monster.create(name: "Garou",user:barack, species:"Werewolf")
 
+=======
+#
+User.destroy_all
+Monster.destroy_all
+#
+pierre = User.create(first_name: "Pierre", last_name: "Lazzaref", password: "8765432", email: "pierre.lazzaref@gmail.com")
+paul = User.create(first_name: "Paul", last_name: "Ricoeur", password: "tyazrr", email: "david.bowie@gmail.com")
+jacques = User.create(first_name: "Jacques", last_name: "Derrida", password: "derderida", email: "deridez.moi@gmail.com")
+Monster.create(name: "Cthulhu", user:pierre, species:"Classic", description:"H.P. Lovecraft's cosmic entity")
+Monster.create(name: "Frankenstein", user:paul, species:"Classic", description:"Mary Shelley's utlimate freak")
+Monster.create(name: "Barbapapa",user:jacques, species:"Blob", description:"‎Annette Tison and Talus Taylor children's favorite")
+>>>>>>> master
