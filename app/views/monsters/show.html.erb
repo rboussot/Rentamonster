@@ -13,7 +13,7 @@
 <p><%= @monster.price%></p>
 
     <% if @monster.user == current_user %>
-    <%= link_to "Edit my monster", edit_monster_path(@cocktail) %>
+    <%= link_to "Edit my monster", edit_monster_path(@monster) %>
     <% else %>
-    <%= link_to "Book this monster", bookings_create_path %>
+    <%= link_to "Book this monster", new_monster_booking_path(@monster) %>
     <% end %>
