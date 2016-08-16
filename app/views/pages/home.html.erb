@@ -1,9 +1,22 @@
 <div class= "container">
   <div class= "row">
-    <div class= "col-md-4 col-offset-4">
-        <h1>Rent-A-Monster</h1>
-        <p>Find me in app/views/pages/home.html.erb</p>
-        <p>We're doing good</p>
+    <div class= "col-md-4 col-md-offset-4">
+      <div class="text-center">
+        <h3>Search for the monster of your nigthmares !</h3>
+
+            <!-- Search form -->
+        <form action="" class="navbar-wagon-search">
+          <input type="text" class="navbar-wagon-search-input" placeholder="GingerBreadMan">
+              <button type="submit" class="navbar-wagon-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+        </form>
+
+        <h2><%= link_to "Search", monsters_path, {class: "btn btn-success"}  %></h2>
+    </div>
+
+
+
     </div>
   </div>
 </div>
