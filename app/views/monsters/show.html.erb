@@ -1,0 +1,19 @@
+<h1><%= @monster.name%></h1>
+<p><%= @monster.title%></p>
+<p><%= @monster.species%></p>
+<p><%= @monster.gender%></p>
+<p><%= @monster.birthdate%></p>
+<p><%= @monster.size%></p>
+<p><%= @monster.weight%></p>
+<p><%= @monster.behavior%></p>
+<p><%= @monster.description%></p>
+<p><%= @monster.food%></p>
+<p><%= @monster.exercise%></p>
+<p><%= @monster.availability%></p>
+<p><%= @monster.price%></p>
+
+    <% if @monster.user == current_user %>
+    <%= link_to "Edit my monster", edit_monster_path(@cocktail) %>
+    <% else %>
+    <%= link_to "Book this monster", bookings_create_path %>
+    <% end %>
