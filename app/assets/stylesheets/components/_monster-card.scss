@@ -1,0 +1,22 @@
+.monster-card {
+  background-color: #ccc;
+  height: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.monster-card ul {
+  list-style-type: none;
+}
+
+.monster-description {
+  color: red;
+}
+
+.monster-card img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid blue;
+}
