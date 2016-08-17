@@ -20,26 +20,27 @@ pierre = User.create(first_name: "Pierre", last_name: "Lazzaref", password: "876
 paul = User.create(first_name: "Paul", last_name: "Ricoeur", password: "tyazrr", email: "david.bowie@gmail.com")
 jacques = User.create(first_name: "Jacques", last_name: "Derrida", password: "derderida", email: "deridez.moi@gmail.com")
 
-bill = Monster.new(name: "Bill", user:john, species:"Vampire", title:"Elegant and thirsty")
-bill.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471434959', public_id: 'm8pzwrvxsjoiljtijdtv')
-bill.save
 
-nessie = Monster.new(name: "Nessie", user:john, species:"Dinosaur", title:"Shy but supportive")
-nessie.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435008', public_id: 'g89wjreek4ftnkmezzw7')
-nessie.save
+# bill = Monster.new(name: "Bill", user:john, species:"Vampire", title:"Elegant and thirsty")
+# bill.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471434959', public_id: 'm8pzwrvxsjoiljtijdtv')
+# bill.save
 
-garou = Monster.new(name: "Garou",user:john, species:"Werewolf", title:"Night only")
-garou.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471434992', public_id: 'yxqndunbxk1mliabckpx')
-garou.save
+# nessie = Monster.new(name: "Nessie", user:john, species:"Dinosaur", title:"Shy but supportive")
+# nessie.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435008', public_id: 'g89wjreek4ftnkmezzw7')
+# nessie.save
 
-ctulu = Monster.new(name: "Cthulhu", user:john, species:"Classic", title:"H.P. Lovecraft's cosmic entity")
-ctulu.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435040', public_id: 'kxvf2wa95zipo322g9ou')
-ctulu.save
+# garou = Monster.new(name: "Garou",user:john, species:"Werewolf", title:"Night only")
+# garou.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471434992', public_id: 'yxqndunbxk1mliabckpx')
+# garou.save
 
-frank = Monster.new(name: "Frankenstein", user:john, species:"Classic", title:"Mary Shelley's utlimate freak")
-frank.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435055', public_id: 'ccmfhrmaou6uuynvqlqf')
-frank.save
+# ctulu = Monster.new(name: "Cthulhu", user:john, species:"Classic", title:"H.P. Lovecraft's cosmic entity")
+# ctulu.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435040', public_id: 'kxvf2wa95zipo322g9ou')
+# ctulu.save
 
-barba = Monster.new(name: "Barbapapa",user:john, species:"Blob", title:"‎Annette Tison and Talus Taylor children's favorite")
-barba.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435074', public_id: 'i3az6fjdmnyhapwmrora')
-barba.save
+# frank = Monster.new(name: "Frankenstein", user:john, species:"Classic", title:"Mary Shelley's utlimate freak")
+# frank.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435055', public_id: 'ccmfhrmaou6uuynvqlqf')
+# frank.save
+
+# barba = Monster.new(name: "Barbapapa",user:john, species:"Blob", title:"‎Annette Tison and Talus Taylor children's favorite")
+# barba.photo = Attachinary::File.new(resource_type: 'image', version: 'v1471435074', public_id: 'i3az6fjdmnyhapwmrora')
+# barba.save
