@@ -13,7 +13,7 @@ john = User.create(first_name: "John", last_name: "Lennon", password: "azerty", 
 # john.photo = Attachinary::File.new(resource_type: 'image', version: '', public_id: '') # remote to bdd
 # john.save
 # john.photo = File.open(local_path) # approximatif - local to remote through bdd
-#
+
 david = User.create(first_name: "David", last_name: "Bowie", password: "azerty", email: "david.bowie@gmail.com")
 barack = User.create(first_name: "Barack", last_name: "Obama", password: "azerty", email: "barack.obama@gmail.com")
 pierre = User.create(first_name: "Pierre", last_name: "Lazzaref", password: "8765432", email: "pierre.lazzaref@gmail.com")
