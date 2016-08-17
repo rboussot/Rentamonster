@@ -10,6 +10,8 @@ User.destroy_all
 Monster.destroy_all
 
 john = User.create(first_name: "John", last_name: "Lennon", password: "azerty", email: "john.lennon@gmail.com")
+john.photo = 'id cloudinary'
+john.save
 david = User.create(first_name: "David", last_name: "Bowie", password: "azerty", email: "david.bowie@gmail.com")
 barack = User.create(first_name: "Barack", last_name: "Obama", password: "azerty", email: "barack.obama@gmail.com")
 Monster.create(name: "Bill", user:john, species:"Vampire", title:"Elegant and thirsty")
