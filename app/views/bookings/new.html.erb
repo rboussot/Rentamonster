@@ -1,3 +1,12 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class= "col-sm-offset-3 col-sm-6">
+
+<% if @monster.photo? %>
+  <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>
+
 <p><%= @monster.name %></p>
 <p><%= @monster.species %></p>
 
@@ -10,3 +19,8 @@
 <p><%= @booking.price %></p>
 
 <%= link_to "Cancel", monster_path(@monster) %>
+
+      </div>
+    </div>
+  </div>
+</div>
