@@ -1,3 +1,6 @@
+body {
+  background-color: #001E37;
+}
 .monster-card {
   background-color: #253998;
   background-size: cover;
@@ -17,20 +20,37 @@
 }
 
 .monster-card img {
+<<<<<<< HEAD
   background-color: red;
 
   // width: 100px;
   // height: 100px;
+=======
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-bottom: 18px;
+  margin: auto;
+  border-radius: 50%
+}
+
+.monster-card img:hover {
+>>>>>>> master
   border: 2px solid #ccc;
-  margin-bottom: 8px;
 }
 
 .monster-card h2 {
-  color: #02070A;
+  color: #aaaaaa;
 }
 
 
 .monster-card h3 {
   color: #737373;
   font-size: 22px;
+}
+
+.card-link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px
 }
