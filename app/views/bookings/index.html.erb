@@ -1,18 +1,30 @@
 <div class="wrapper">
   <div class="container">
-    <div class="row">
-      <div class= "col-sm-offset-3 col-sm-6">
+
+
 
         <% @bookings.each do |b|%>
-        <p><%= b.monster.name %></p>
-        <p><%= b.monster.species %></p>
-        <p><%= b.start_date %></p>
-        <p><%= b.end_date%></p>
-        <p><%= b.price %></p>
-        <p><%= b.status %></p>
+        <div class="row">
+        <div class="marge"></div>
+          <div class= "col-xs-4">
+          <% if b.monster.photo? %>
+            <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
+          <% end %>
+          </div>
+
+        <div class= "col-xs-8">
+          <h1><%= b.monster.name %></h1>
+          <p><%= b.monster.species %></p>
+          <p><%= b.start_date %></p>
+          <p><%= b.end_date%></p>
+          <p><%= b.price %></p>
+          <p><%= b.status %></p>
+        </div>
+              </div>
         <% end %>
 
-      </div>
+        <%= link_to "Back to all monsters", monsters_path %>
+
     </div>
   </div>
 </div>
