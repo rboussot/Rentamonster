@@ -3,11 +3,13 @@
     <div class="row">
       <div class= "col-sm-offset-3 col-sm-6">
 
+<div class="marge"></div>
+
 <% if @monster.photo? %>
   <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
 <% end %>
 
-<p><%= @monster.name %></p>
+<h1><%= @monster.name %></h1>
 <p><%= @monster.species %></p>
 
 <%= simple_form_for([@monster, @booking]) do |b| %>
