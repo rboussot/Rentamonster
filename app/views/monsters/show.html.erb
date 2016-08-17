@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class= "col-sm-offset-3 col-sm-6">
+      <div class= "col-sm-offset-2 col-sm-4">
 
         <% if @monster.photo? %>
           <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
@@ -14,6 +14,10 @@
         <p>Birthdate : <%= @monster.birthdate%></p>
         <p>Size : <%= @monster.size%></p>
         <p>Weight : <%= @monster.weight%></p>
+
+      </div>
+
+      <div class="col-sm-4">
         <p>Behavior : <%= @monster.behavior%></p>
         <p>Description<%= @monster.description%></p>
         <p>Food : <%= @monster.food%></p>
@@ -21,7 +25,10 @@
         <p>Available ?<%= @monster.availability%></p>
         <p>Price / day : <%= @monster.price%></p>
         <p>Owned by : <%= @monster.user.first_name%> <%= @monster.user.last_name%></p>
+      </div>
+    </div>
 
+    <div class= "links text-center">
         <% if @monster.user == current_user %>
         <%= link_to "Edit my monster", edit_monster_path(@monster) %>
         <% else %>
@@ -29,6 +36,7 @@
         <% end %>
         <br>
         <%= link_to "Back to monsters", monsters_path %>
+      </div>
 
       </div>
     </div>

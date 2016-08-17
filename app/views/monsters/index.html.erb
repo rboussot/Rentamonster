@@ -1,16 +1,28 @@
 <div class="container">
   <div class="row">
-          <% @monster.each do |m| %>
-            <div class="col-md-4 col-xs-12 ">
-              <div class="monster-card">
-                 <ul>
-                    <li> <h2> <%= m.name %> </h2> </li>
-                    <li> <h3> <%= m.title %> </h3> </li>
-                    <li> <h4> <%= m.description %></h4> </li>
-                    <li><%= link_to "More info", monster_path(m.id), class:'btn-danger'%></li>
-                 </ul>
-              </div>
-            </div>
-          <% end %>
+
+    <% @monster.each do |m| %>
+    <div class="col-md-4 col-xs-12 ">
+    <div class="monster-card">
+
+     <ul>
+        <li> <h2> <%= m.name %> </h2> </li>
+        <li> <h3> <%= m.title %> </h3> </li>
+        <li> <h4> <%= m.description %></h4> </li>
+          <div >
+            <% if m.photo? %>
+              <%= cl_image_tag m.photo.path, width: 200, height: 300, crop: :fill %>
+           <% end %>
+          </div>
+        <li><button><%= link_to "More info", monster_path(m.id)%></button></li>
+      </ul>
+
+      <div class="owner-avatar">
+      <img src="assets/hp_lovecraft.jpg">
+      </div>
+
+    </div>
+    </div>
+    <% end %>
   </div>
 </div>

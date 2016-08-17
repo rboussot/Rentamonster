@@ -1,10 +1,5 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="row">
-      <div class= "col-sm-offset-3 col-sm-6">
-
 <h1>Edit your monster !</h1>
-<%= render "shared/form" %>
+<%= render "form" %>
 <br>
 <%= link_to "Delete", monster_path(@monster),
       method: :delete,
@@ -12,7 +7,4 @@
 
 <%= link_to "Back to monsters", monsters_path %>
 
-      </div>
-    </div>
-  </div>
-</div>
+
