@@ -2,7 +2,8 @@ body {
   background-color: #001E37;
 }
 .monster-card {
-  background-color: #101010;
+  background-color: #253998;
+  background-size: cover;
   height: 400px;
   padding: 10px;
   margin-top: 20px;
@@ -19,6 +20,12 @@ body {
 }
 
 .monster-card img {
+<<<<<<< HEAD
+  background-color: red;
+
+  // width: 100px;
+  // height: 100px;
+=======
   width: 200px;
   height: 200px;
   text-align: center;
@@ -28,6 +35,7 @@ body {
 }
 
 .monster-card img:hover {
+>>>>>>> master
   border: 2px solid #ccc;
 }
 
