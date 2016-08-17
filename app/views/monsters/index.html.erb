@@ -10,7 +10,10 @@
                 <div class="monster-description">
                 <li><h4> <%= m.description %></h4> </li>
                 </div>
-                 <li> <%= image_tag(("hp_lovecraft.jpg"), :class => "avatar") %> </li>
+
+                 <li> <img src="" alt="image"> </li>
+                 <li><%= link_to "Details", monster_path(m.id)%></li>
+
              </ul>
            </div></div>
           <% end %>
