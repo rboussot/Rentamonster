@@ -4,10 +4,37 @@
  * ------------------------------------- */
 .homebackground {
   background-image: url('sully-lg.jpg') ;
-  background-size: cover;
+  background-size: cover ;
   #map {
-    opacity: 0.85;
+    opacity: 0.88;
     margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 2%;
   }
+}
+
+.searchbarhome {
+  margin-top: 210px;
+}
+
+.searchbarhome h1 {
+  color: #D3CA24;
+  font-weight: bolder;
+  margin-left: 5px;
+  font-size: 42px;
+}
+
+.searchbarhome .navbar-wagon-search-input {
+  margin-right: 10px;
+}
+
+.searchbarhome .navbar-wagon-search-input {
+  border-radius: 4px;
+}
+
+.searchbarhome .btn-success {
+  border-radius: 5px;
+  background-color: #D23333;
+  border: none;
 }
 
