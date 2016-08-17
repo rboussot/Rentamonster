@@ -4,16 +4,32 @@
           <% @monster.each do |m| %>
           <div class="col-md-4 col-xs-12 ">
           <div class="monster-card">
+
+
+
              <ul>
-               <li><h2> <%= m.name %> </h2> </li>
-                <li> <%= m.title %> </li>
-                <div class="monster-description">
-                <li><h4> <%= m.description %></h4> </li>
-                </div>
-                 <li> <img src="" alt="image"> </li>
-                 <li><%= link_to "Details", monster_path(m.id)%></li>
+                <li> <h2> <%= m.name %> </h2> </li>
+
+
+
+                <li> <h3> <%= m.title %> </h3> </li>
+                <li> <h4> <%= m.description %></h4> </li>
+        <div >
+                <img src="assets/godzilla.jpg" alt="" width="200px" class="monster-pic">
+              </div>
+
+
+                <li><button><%= link_to "More info", monster_path(m.id)%></button></li>
+
              </ul>
-           </div></div>
+
+            <div class="owner-avatar">
+             <img src="assets/hp_lovecraft.jpg">
+             </div>
+
+
+           </div>
+          </div>
           <% end %>
 
 
