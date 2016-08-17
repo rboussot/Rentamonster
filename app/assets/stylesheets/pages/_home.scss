@@ -2,3 +2,12 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.homebackground {
+  background-image: url('sully-lg.jpg') ;
+  background-size: cover;
+  #map {
+    opacity: 0.85;
+    margin-bottom: 20px;
+  }
+}
+
