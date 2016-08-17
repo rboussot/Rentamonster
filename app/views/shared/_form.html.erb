@@ -1,31 +1,25 @@
-<%= form_for(@monster) do |m| %>
-    <% if @monster.errors.any? %>
+<%= simple_form_for(@monster) do |f| %>
+  <% if @monster.errors.any? %>
 
-    <% end %>
-
-    <%= m.label "name*" %>
-    <%= m.text_field :name %><br>
-    <%= m.label "Give a slogan to your monster" %>
-    <%= m.text_field :title %><br>
-    <%= m.label "precise which species*" %>
-    <%= m.text_field :species %><br>
-    <%= m.label "the gender is" %>
-    <%= m.text_field :gender %><br>
-    <%= m.label "the birthdate ?" %>
-    <%= m.text_field :birthdate %><br>
-    <%= m.label "what is the size ?" %>
-    <%= m.number_field :size %><br>
-    <%= m.label "what weight ?" %>
-    <%= m.number_field :weight %><br>
-    <%= m.label "please describe your monster !" %><br>
-    <%= m.text_area :description %><br>
-    <%= m.label "What does your monster eat ?" %>
-    <%= m.text_field :food %><br>
-    <%= m.label "What kind of exercise does he need ?" %>
-    <%= m.text_field :exercise %><br>
-    <%= m.label "precise the price (for one day)"%>
-    <%= m.number_field :price %><br>
-    <%= m.label "Is your monster currently available ?"%>
-    <%= m.check_box :availability %><br>
-    <%= m.button :submit %>
+  <% end %>
+  <%= f.error_notification %>
+  <%= f.input :name, label: "Name :" %>
+  <%= f.input :title, label: "Give a slogan to your monster" %>
+  <%= f.input :species, label: "What is the species ?" %>
+  <%= f.input :gender, label: "Precise gender :" %>
+  <%= f.input :birthdate, label: "Birthdate ?" %>
+  <%= f.input :size, label: "what is the size?" %>
+  <%= f.input :weight, label: "what weight?" %>
+  <%= f.input :description, label: "please describe your monster!" %>
+  <%= f.input :food, label: "What does your monster eat?" %>
+  <%= f.input :exercise, label: "What kind of exercise does he need?" %>
+  <%= f.input :price, label: "precise the price (for one day)" %><br>
+  <%= f.input :availability, label: "Is your monster currently available?" %><br>
+  <%= f.input :photo, as: :attachinary %>
+  <% if @monster.photo? %>
+    <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
+  <% end %>
+  <%= f.submit %>
 <% end %>
+
+

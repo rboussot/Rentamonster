@@ -1,5 +1,6 @@
 class MonstersController < ApplicationController
-before_action :find_monster, only: [:show, :edit, :update, :destroy]
+  before_action :find_monster, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
     @monster = Monster.all
@@ -10,8 +11,10 @@ before_action :find_monster, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @monster = Monster.save(monster_params)
+    @monster = Monster.new(monster_params)
+    @monster.user = current_user
     if @monster.save
+      flash[:notice] = "Monster #{@monster.name} has been added !"
       redirect_to monster_path(@monster)
     else
       render :new
@@ -32,10 +35,15 @@ before_action :find_monster, only: [:show, :edit, :update, :destroy]
     redirect_to monster_path(@monster)
   end
 
+  def destroy
+    @monster.destroy
+    redirect_to monsters_path
+  end
+
   private
 
   def monster_params
-    params.require(:monster).permit(:name, :species, :title, :gender, :birthdate, :size, :weight, :behavior, :description, :food, :exercise, :availability, :price)
+    params.require(:monster).permit(:name, :species, :title, :gender, :birthdate, :size, :weight, :behavior, :description, :food, :exercise, :availability, :price, :photo)
   end
 
   def find_monster

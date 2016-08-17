@@ -1,8 +1,18 @@
-<% @bookings.each do |b|%>
-<p><%= b.monster.name %></p>
-<p><%= b.monster.species %></p>
-<p><%= b.start_date %></p>
-<p><%= b.end_date%></p>
-<p><%= b.price %></p>
-<p><%= b.status %></p>
-<% end %>
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class= "col-sm-offset-3 col-sm-6">
+
+        <% @bookings.each do |b|%>
+        <p><%= b.monster.name %></p>
+        <p><%= b.monster.species %></p>
+        <p><%= b.start_date %></p>
+        <p><%= b.end_date%></p>
+        <p><%= b.price %></p>
+        <p><%= b.status %></p>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
