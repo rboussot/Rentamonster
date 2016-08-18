@@ -1,10 +1,7 @@
-body {
-  background-color: #001E37;
-}
 .monster-card {
   background-color: #253998;
   background-size: cover;
-  height: 400px;
+  height: 100vh;
   padding: 10px;
   margin-top: 20px;
   border-radius: 4px;
@@ -20,9 +17,6 @@ body {
 }
 
 .monster-card img {
-  background-color: red;
-  // width: 100px;
-  // height: 100px;
   width: 200px;
   height: 200px;
   text-align: center;
