@@ -7,6 +7,4 @@ class Monster < ApplicationRecord
   validates :name, presence: true
   validates :species, presence: true
   validates :photo, presence: true
-  validates :availability, inclusion: { in: BEHAVIOR }
-  validates :behavior, inclusion: { in: AVAILABILITY }
 end

@@ -1,11 +1,13 @@
 .monster-card {
   background-color: black;
   background-size: cover;
-  height: 100vh;
+  height: 450px;
   padding: 10px;
   margin-top: 20px;
   border-radius: 4px;
   opacity: 0.9;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 .monster-card ul {
@@ -22,7 +24,9 @@
   text-align: center;
   margin-bottom: 18px;
   margin: auto;
-  border-radius: 50%
+  border-radius: 50%;
+  position: absolute;
+  bottom: 35px;
 }
 
 .monster-card img:hover {

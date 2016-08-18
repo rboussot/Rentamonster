@@ -18,7 +18,7 @@ john = User.create(first_name: "John", last_name: "Lennon", password: "azerty", 
 # john.photo = File.open(local_path) # approximatif - local to remote through bdd
 puts "User John Lennon created"
 
-david = User.create(first_name: "David", last_name: "Bowie", password: "azerty", email: "david.bowie@gmail.com")
+User.create(first_name: "David", last_name: "Bowie", password: "azerty", email: "david.bowie@gmail.com")
 puts "User David Bowie created"
 
 bill = Monster.new(name: "Bill", user: john, species: "Vampire", title: "Elegant and thirsty", availability: "Ongoing", behavior: "Scary", price: 5)
