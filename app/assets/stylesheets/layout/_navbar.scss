@@ -10,6 +10,10 @@
   justify-content: space-between;
 }
 
+.navbar-wagon:hover {
+  background-color: red;
+}
+
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
   position: fixed;
@@ -128,8 +132,8 @@
   border-top: 1px solid #E6E6E6;
 }
 
-.navbar-wagon p {
-  font-size: 35px;
+.navbar-wagon .brand {
+  font-size: 25px;
   margin-left: 65px;
   margin-top: -45px;
 }
