@@ -1,10 +1,24 @@
-<h1>Edit your monster !</h1>
-<%= render "form" %>
-<br>
-<%= link_to "Delete", monster_path(@monster),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
 
-<%= link_to "Back to monsters", monsters_path %>
+
+<div class="container">
+  <div class="form">
+  <h1 class="text-center">Edit your monster !</h1>
+    <div class="row">
+
+      <div class="col-sm-offset-2 col-sm-4">
+        <% if @monster.photo? %>
+        <%= cl_image_tag @monster.photo.path, width: 350, height: 500, crop: :fill %>
+        <% end %>
+      </div>
+
+      <div class="col-sm-4">
+        <%= render "form" %>
+        <%= link_to "Delete", monster_path(@monster), method: :delete, data: { confirm: "Are you sure?" }, class: "form-btn1" %>
+        <%= link_to "Back to monsters", monsters_path, class: "form-btn2" %>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 

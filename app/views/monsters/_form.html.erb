@@ -1,26 +1,14 @@
-<div class="wrapper">
-  <div class="container">
-    <div class="row">
-      <div class= "col-sm-offset-2 col-sm-8">
-
         <%= simple_form_for(@monster) do |f| %>
           <% if @monster.errors.any? %>
 
           <% end %>
           <%= f.error_notification %>
-          <% if @monster.photo? %>
-          <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
-          <% end %>
           <%= f.input :name, label: "Name :" %>
           <%= f.input :photo, as: :attachinary %>
           <%= f.input :title, label: "Give a slogan to your monster" %>
           <%= f.input :species, label: "What is the species ?" %>
           <%= f.input :price, label: "precise the price (for one day)" %><br>
           <%= f.input :availability, label: "Is your monster currently available?" %><br>
-          <%= f.submit %>
+          <%= f.submit class: "navbar-wagon-button"%>
         <% end %>
 
-      </div>
-    </div>
-  </div>
-</div>
