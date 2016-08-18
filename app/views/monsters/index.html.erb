@@ -8,12 +8,11 @@
      <ul>
         <li> <h1> <%= m.name %> </h1> </li>
         <li> <h3> <%= m.title %> </h3> </li>
-          <div >
-            <% if m.photo? %>
-              <%= cl_image_tag m.photo.path, width: 200, height: 300, crop: :fill %>
-           <% end %>
-          </div>
-        <li class= "card-link"><%= link_to "More info", monster_path(m.id)%></li>
+        <div >
+          <%= link_to monster_path(m.id) do %>
+            <%= cl_image_tag m.photo.path, width: 200, height: 300, crop: :fill %>
+          <% end %>
+        </div>
       </ul>
     </div>
     </div>
