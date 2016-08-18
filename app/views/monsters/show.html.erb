@@ -1,47 +1,46 @@
 <div class="wrapper">
   <div class="container">
-    <div class="row">
-      <div class= "col-sm-offset-2 col-sm-4">
 
-        <div class="marge"></div>
+    <div class="show">
+      <div class="row">
 
-        <% if @monster.photo? %>
-          <%= cl_image_tag @monster.photo.path, width: 200, height: 300, crop: :fill %>
-        <% end %>
+        <div class= "col-sm-offset-2 col-sm-4">
+          <div class="marge"></div>
+          <% if @monster.photo? %>
+            <%= cl_image_tag @monster.photo.path, width: 350, height: 400, crop: :fill %>
+          <% end %>
+        </div>
 
-        <h1>Name : <%= @monster.name%></h1>
-        <p>Title : <%= @monster.title%></p>
-        <p>Species : <%= @monster.species%></p>
-        <p>Gender : <%= @monster.gender%></p>
-        <p>Birthdate : <%= @monster.birthdate%></p>
-        <p>Size : <%= @monster.size%></p>
-        <p>Weight : <%= @monster.weight%></p>
+        <div class="col-sm-4">
+          <div class="show">
+            <h1>Name : <%= @monster.name%></h1>
+            <p><strong>Title : </strong><%= @monster.title%></p>
+            <p><strong>Species : </strong><%= @monster.species%></p>
+            <p><strong>Behavior : </strong><%= @monster.behavior%></p>
+            <p><strong>Availability : </strong><%= @monster.availability%></p>
+            <p><strong>Price / day : </strong> <%= @monster.price%></p>
+            <p><strong>Owned by : </strong><%= @monster.user.first_name%> <%= @monster.user.last_name%></p>
+          </div>
+        </div>
 
       </div>
 
-      <div class="col-sm-4">
       <div class="marge"></div>
-        <p>Behavior : <%= @monster.behavior%></p>
-        <p>Description<%= @monster.description%></p>
-        <p>Food : <%= @monster.food%></p>
-        <p>Exercise : <%= @monster.exercise%></p>
-        <p>Available ?<%= @monster.availability%></p>
-        <p>Price / day : <%= @monster.price%></p>
-        <p>Owned by : <%= @monster.user.first_name%> <%= @monster.user.last_name%></p>
-      </div>
-    </div>
-
-    <div class= "links text-center">
+      <div class= "show-btn1 text-center">
         <% if @monster.user == current_user %>
-        <%= link_to "Edit my monster", edit_monster_path(@monster) %>
+        <%= link_to "EDIT MY MONSTER", edit_monster_path(@monster) %>
         <% else %>
-        <%= link_to "Book this monster", new_monster_booking_path(@monster) %>
+        <%= link_to "BOOK THIS MONSTER", new_monster_booking_path(@monster) %>
         <% end %>
-        <br>
-        <%= link_to "Back to monsters", monsters_path %>
       </div>
 
+      <div class= "show-btn2 text-center">
+        <%= link_to "BACK TO MONSTERS", monsters_path %>
       </div>
+
     </div>
+
+
+
   </div>
 </div>
