@@ -5,16 +5,11 @@
 .homebackground {
   background-image: image-url('sully-lg.jpg') ;
   background-size: cover ;
-  #map {
-    opacity: 0.88;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    border-radius: 2%;
-  }
 }
 
 .searchbarhome {
   margin-top: 210px;
+  margin-bottom: 200px;
 }
 
 .searchbarhome h1 {
@@ -34,7 +29,7 @@
 
 .searchbarhome .btn-success {
   border-radius: 5px;
-  background-color: #D23333;
+  background-color: green;
   border: none;
 }
 
