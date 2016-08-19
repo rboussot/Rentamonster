@@ -1,9 +1,7 @@
 class UserProfile < ApplicationRecord
 
-
-  def index
-    @user_profiles = UserProfile.all
-  end
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
 
 end
