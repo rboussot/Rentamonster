@@ -1,0 +1,57 @@
+<div class="wrapper">
+  <div class="container">
+
+  <div class="row">
+
+        <div class="col-sm-12">
+          <div class="show">
+            <div class="show-profile">
+            <h2><%= @user.first_name %></h2>
+            <h2><%= @user.last_name %></h2>
+            <h3><%= @user.email%></h3>
+            </div>
+
+            <cite>"Hey there ! I got a few spare monsters for you to rent. Just make sure you feed them before they feed off you" </cite>
+
+      <div class= "show-btn2 text-center" id="mons">
+        <%= link_to "BACK TO MONSTERS", monsters_path %>
+      </div>
+      <div class= "show-btn2 text-center" id="books">
+       <%= link_to "CHECK MY BOOKINGS", bookings_path %>
+      </div>
+
+
+
+        </div>
+      </div>
+      </div>
+
+      <div class="container">
+  <div class="row">
+
+    <% @monsters.each do |m| %>
+    <div class="col-md-4 col-sm-4 col-xs-12 ">
+    <div class="monster-card" >
+
+     <ul>
+        <li> <h1> <%= m.name %> </h1> </li>
+        <li> <h3> <%= m.title %> </h3> </li>
+        <div >
+          <%= link_to monster_path(m.id) do %>
+            <%= cl_image_tag m.photo.path, crop: :fill %>
+          <% end %>
+        </div>
+      </ul>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+  </div>
+</div>

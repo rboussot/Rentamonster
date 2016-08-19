@@ -3,8 +3,8 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 .homebackground {
-  background-image: image-url('sully-lg.jpg') ;
-  background-size: cover ;
+  background-size: cover !important;
+  height: calc(100vh - 65px);
 }
 
 .searchbarhome {
