@@ -7,8 +7,10 @@
         <div class="row">
           <div class="marge"></div>
             <div class= "col-xs-4">
-              <% if b.monster.photo? %>
-                <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
+              <%= link_to b.monster do %>
+                <% if b.monster.photo? %>
+                  <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
+                <% end %>
               <% end %>
             </div>
             <div class= "col-xs-8">
@@ -27,7 +29,7 @@
     <% end %>
 
 <h2> My Bookings </h2>
-    <% current_user.bookings.each do |b|%>
+    <% current_user.bookings.reverse.each do |b|%>
       <div class="bookings">
         <div class="row">
           <div class="marge"></div>

@@ -60,6 +60,3 @@ puts "Booking john->barba created"
 b3 = Booking.new(user: david, monster: nessie, start_date: Date.today, end_date: Date.today)
 b3.save
 puts "Booking david->nessie created"
-b4 = Booking.new(user: david, monster: garou, start_date: Date.today, end_date: Date.today)
-b4.save
-puts "Booking david->garou created"
