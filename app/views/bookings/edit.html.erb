@@ -13,16 +13,9 @@
         <div class= "col-sm-4">
           <h1><%= @monster.name %></h1>
           <p><%= @monster.species %></p>
-          <%= simple_form_for([@monster, @booking]) do |form| %>
-            <%= form.input :start_date, id: "start_date" %>
-            <%= form.input :end_date, id: "end_date" %>
-            <%= form.button :submit, class: "book-btn1" %>
-            <br>
-            <h4 id="price">Total rent = <%= @monster.price.round %> euros</h4>
-
-
-            <% end %>
-          <%= link_to "Cancel", monster_path(@monster), class: "book-btn2" %>
+          <p><%= @booking.start_date %></p>
+          <p><%= @booking.end_date %></p>
+          <%= link_to "Back", bookings_path, class: "book-btn2" %>
         </div>
 
       </div>

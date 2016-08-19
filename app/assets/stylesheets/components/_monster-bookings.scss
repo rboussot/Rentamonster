@@ -1,0 +1,62 @@
+.bookings {
+    background-color: black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 18px;
+    padding-bottom: 16px;
+    padding-top: 0px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.bookings-btn1 {
+    position: absolute;
+    color: white;
+    bottom: 40px;
+    right: 230px;
+    margin: 0px;
+    width: 180px;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #3FACC7;
+    border: 2px solid #447687;
+}
+
+.bookings-btn2 {
+    width: 247px;
+    font-size: 15px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    background-color: #3FACC7;
+    border: 2px solid #447687;
+    margin-left: 45%;
+}
+
+div.bookings-btn1:hover {
+  opacity: 0.6;
+  color: black;
+  font-weight: lighter !important;
+  // font-size: 15px !important;
+  line-height: 22px !important;
+}
+
+div.bookings-btn2:hover {
+  opacity: 0.6;
+  color: black;
+  font-weight: lighter !important;
+  // font-size: 15px !important;
+  line-height: 22px !important;
+}
+
+input.btn.btn-default.bookings-btn1:hover {
+  background-color: #3FACC7;
+  border: 2px solid #447687;
+  opacity: 0.6;
+  color: black;
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+}
+
+

@@ -1,30 +1,60 @@
 <div class="wrapper">
   <div class="container">
 
-
-
-        <% @bookings.each do |b|%>
+<h2> Bookings on my monsters </h2>
+    <% @owner_bookings.each do |b|%>
+      <div class="bookings">
         <div class="row">
-        <div class="marge"></div>
-          <div class= "col-xs-4">
-          <% if b.monster.photo? %>
-            <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
-          <% end %>
-          </div>
-
-        <div class= "col-xs-8">
-          <h1><%= b.monster.name %></h1>
-          <p><%= b.monster.species %></p>
-          <p><%= b.start_date %></p>
-          <p><%= b.end_date%></p>
-          <p><%= b.price %></p>
-          <p><%= b.status %></p>
-        </div>
+          <div class="marge"></div>
+            <div class= "col-xs-4">
+              <% if b.monster.photo? %>
+                <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
+              <% end %>
+            </div>
+            <div class= "col-xs-8">
+              <h1><%= b.monster.name %></h1>
+              <p><%= b.monster.species %></p>
+              <p><%= b.start_date %></p>
+              <p><%= b.end_date%></p>
+              <p><%= b.price %></p>
+              <p><%= b.status %></p>
+              <div class="bookings-btn1">
+                  <%= link_to "EDIT BOOKING", edit_monster_booking_path(b.monster, b) %><br>
               </div>
-        <% end %>
+            </div>
+        </div>
+      </div>
+    <% end %>
 
-        <%= link_to "Back to all monsters", monsters_path %>
+<h2> My Bookings </h2>
+    <% current_user.bookings.each do |b|%>
+      <div class="bookings">
+        <div class="row">
+          <div class="marge"></div>
+            <div class= "col-xs-4">
+              <% if b.monster.photo? %>
+                <%= cl_image_tag b.monster.photo.path, width: 200, height: 300, crop: :fill %>
+              <% end %>
+            </div>
+            <div class= "col-xs-8">
+              <h1><%= b.monster.name %></h1>
+              <p><%= b.monster.species %></p>
+              <p><%= b.start_date %></p>
+              <p><%= b.end_date%></p>
+              <p><%= b.price %></p>
+              <p><%= b.status %></p>
+              <div class="bookings-btn1">
+                  <%= link_to "ASK OWNER" %><br>
+              </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
 
     </div>
   </div>
 </div>
+
+      <div class= "bookings-btn2 text-center">
+        <%= link_to "BACK TO ALL MONSTERS", monsters_path %>
+      </div>

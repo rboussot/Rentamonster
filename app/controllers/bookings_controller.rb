@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.monster = @monster
     @booking.user = current_user
-    @booking.status = "ongoing"
+    @booking.status = "pending"
     if @booking.save
       redirect_to bookings_path
     else
@@ -19,6 +19,18 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @monsters = Monster.where(user: current_user)
+    @owner_bookings = Booking.where(monster_id: @monsters)
+  end
+
+  def edit
+    @monster = Monster.find(params[:monster_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
   end
 
   private
