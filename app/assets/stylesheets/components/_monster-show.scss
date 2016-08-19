@@ -9,6 +9,15 @@
     position: relative;
 }
 
+.show-profile h2, h3 {
+  color: silver;
+}
+
+.show-profile h2 {
+  display: inline;
+  margin-bottom: 50px;
+}
+
 .show-btn1 {
   position: absolute;
   bottom: 20px;

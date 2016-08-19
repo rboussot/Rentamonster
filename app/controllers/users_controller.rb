@@ -2,8 +2,10 @@ class UsersController < ApplicationController
   before_action :find_user, only: [:show]
 
   def show
-    #cf before action
+    @monsters = Monster.where(user: current_user)
   end
+
+
 
   private
 
