@@ -10,7 +10,7 @@
         <li> <h3> <%= m.title %> </h3> </li>
         <div >
           <%= link_to monster_path(m.id) do %>
-            <%= cl_image_tag m.photo.path, width: 200, height: 300, crop: :fill %>
+            <%= cl_image_tag m.photo.path, crop: :fill %>
           <% end %>
         </div>
       </ul>
