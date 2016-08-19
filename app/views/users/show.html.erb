@@ -13,12 +13,11 @@
 
             <cite>"Hey there ! I got a few spare monsters for you to rent. Just make sure you feed them before they feed off you" </cite>
 
-      <div class= "show-btn2 text-center" id="mons">
-        <%= link_to "BACK TO MONSTERS", monsters_path %>
-      </div>
-      <div class= "show-btn2 text-center" id="books">
+            <% if @user == current_user %>
+      <div class= "show-btn3 text-center" id="books">
        <%= link_to "CHECK MY BOOKINGS", bookings_path %>
       </div>
+      <% end %>
 
 
 

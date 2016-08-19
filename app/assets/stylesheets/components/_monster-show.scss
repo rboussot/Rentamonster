@@ -1,7 +1,7 @@
 .show {
     background-color: black;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-bottom: 220px;
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 69px;
@@ -46,6 +46,20 @@
   transition: color 0.3s ease;
 }
 
+div.show-btn3 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 10px;
+  width: 125px;
+  font-size: 15px;
+  padding: 11px 21px;
+  border-radius: 4px;
+  background-color: #3FACC7;
+  border: 2px solid #447687;
+  transition: color 0.3s ease;
+}
+
 .show-btn1:hover {
   opacity: 0.6;
   color: black;
@@ -62,4 +76,19 @@
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
+}
+
+div.show-btn3:hover {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 10px;
+  width: 125px;
+  font-size: 15px;
+  padding: 11px 21px;
+  border-radius: 4px;
+  background-color: #3FACC7;
+  border: 2px solid #447687;
+  opacity: 0.6;
+  color: black;
 }

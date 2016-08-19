@@ -18,7 +18,8 @@
             <%= form.input :end_date, id: "end_date" %>
             <%= form.button :submit, class: "book-btn1" %>
             <br>
-            <h4 id="price">Total rent = <%= @monster.price.round %> euros</h4>
+            <p> This monster costs <%= @monster.price.round %> $ / day</p>
+            <h4 id="price">Total rent = <%= @monster.price.round %> $</h4>
 
 
             <% end %>
