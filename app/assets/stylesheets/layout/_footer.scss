@@ -1,16 +1,53 @@
 // Your footer style
 
 .footer {
+  position: relative;
   background-color: black;
-  color: white;
+  color: #DAD1E9;
   padding: 10px;
+  margin-top: 70px;
 }
 
-h2 {
+h4 {
   color: silver;
-  font-size: 1.7em;
+  font-size: 1.25em;
+
+}
+
+ul {
+  margin-bottom: 40px;
+  margin-top: 30px;}
+
+li {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+}
+
+.fa {
+  font-size: 1.75em;
+  margin-right: 10px;
+  margin-left: -2px;
 }
 
 
+.fb-like {
+  margin-left: 200px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  filter:hue-rotate(240deg);
+  -webkit-filter: hue-rotate(240deg);
+}
 
-
+small {
+  color: silver;
+  font-size: 0.85em;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
