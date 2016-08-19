@@ -1,4 +1,4 @@
-.form {
+.book {
     background-color: black;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -8,48 +8,49 @@
     position: relative;
 }
 
-.form-btn1 {
-  position: absolute;
-  bottom: -11px;
-  right: 27px;
-  margin: 11px;
-  width: 115px;
-  font-size: 15px;
-  padding: 10px 31px;
-  border-radius: 4px;
-  background-color: #3FACC7;
-  border: 2px solid #447687;
-  transition: color 0.3s ease;
+.book-btn1 {
+    position: absolute;
+    color: white;
+    bottom: -100px;
+    right: 130px;
+    margin: 0px;
+    width: 140px;
+    font-size: 15px;
+    padding: 10px 0px;
+    border-radius: 4px;
+    background-color: #3FACC7;
+    border: 2px solid #447687;
 }
 
-.form-btn2 {
+.book-btn2 {
     position: absolute;
-    bottom: -12px;
-    right: 541px;
+    bottom: -112px;
+    right: 270px;
     margin: 11px;
-    width: 168px;
+    width: 94px;
     font-size: 15px;
     padding: 10px 21px;
     border-radius: 4px;
     background-color: #3FACC7;
     border: 2px solid #447687;
-    transition: color 0.3s ease;
 }
 
-.form-btn1:hover {
+.book-btn2:hover {
   opacity: 0.6;
   color: black;
   font-weight: lighter !important;
   font-size: 15px !important;
   line-height: 22px !important;
-  padding: 10px 20px;
 }
 
-.form-btn2:hover {
+input.btn.btn-default.book-btn1:hover {
+  background-color: #3FACC7;
+  border: 2px solid #447687;
   opacity: 0.6;
   color: black;
   font-weight: lighter !important;
   font-size: 15px !important;
   line-height: 22px !important;
-  padding: 10px 20px;
 }
+
+

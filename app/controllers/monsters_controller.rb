@@ -3,7 +3,7 @@ class MonstersController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @monster = Monster.all
+    @monster = Monster.where(availability: true)
   end
 
   def new
