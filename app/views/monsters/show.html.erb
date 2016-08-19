@@ -19,7 +19,9 @@
             <p><strong>Behavior : </strong><%= @monster.behavior%></p>
             <p><strong>Availability : </strong><%= @monster.availability%></p>
             <p><strong>Price / day : </strong> <%= @monster.price%></p>
-            <p><strong>Owned by : </strong><%= @monster.user.first_name%> <%= @monster.user.last_name%></p>
+            <p><strong>Owned by : </strong><%= @monster.user.first_name%>
+            <%= @monster.user.last_name%></p>
+            <%= link_to "show user profile", show_user_path() %>
           </div>
         </div>
 

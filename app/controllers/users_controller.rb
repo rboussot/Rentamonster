@@ -5,5 +5,11 @@ class UsersController < ApplicationController
     #cf before action
   end
 
+  private
+
+  def find_user
+    @user = User.find(params[:id])
+  end
+
 
 end
