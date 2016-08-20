@@ -20,11 +20,12 @@
 
 .monster-card img {
   position: absolute;
-  width: 92%;
-  height: 220px;
+  // width: 92%;
+  // height: 220px;
   border-radius: 5%;
   bottom: 35px;
   left:15px;
+  border: 2px solid black;
 }
 
 .monster-card img:hover {

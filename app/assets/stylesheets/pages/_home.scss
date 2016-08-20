@@ -33,3 +33,23 @@
   border: none;
 }
 
+.search-btn {
+  border-radius: 5px;
+  background-color: green;
+  border: none;
+  color: white;
+  width: 220px;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: #9AA436;
+  border: 2px solid #62682F;
+  border-radius: 4px;
+}
+
+.search-btn:hover {
+  color: black;
+  background-color: #D3CA24;
+  font-weight: lighter !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+}
